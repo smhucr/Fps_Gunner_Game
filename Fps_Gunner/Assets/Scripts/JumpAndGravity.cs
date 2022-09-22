@@ -15,6 +15,7 @@ public class JumpAndGravity : MonoBehaviour
     public Transform groundChecker;
     public float groundCheckerRadius;
     public LayerMask obstacleLayer;
+    private float accTimer;
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -27,6 +28,7 @@ public class JumpAndGravity : MonoBehaviour
         {
             velocity.y += gravity * Time.deltaTime / gravityDivide;
             StartCoroutine(AfterJumpWaitOne());
+            accTimer += Time.deltaTime;
             StopCoroutine(AfterJumpWaitOne());
         }
         else
@@ -42,18 +44,20 @@ public class JumpAndGravity : MonoBehaviour
     }
     IEnumerator AfterJumpWaitOne()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.7f);
         if (!isGround)
         {
-            pMove.speed = jumpSpeed;
-            
+            pMove.speed = Mathf.Lerp(5f, jumpSpeed, accTimer);
+
         }
         if (isGround)
-            {
-                velocity.y = 0.1f;
-                pMove.speed = 5f;
-            }
+        {
+            velocity.y = 0.1f;
+            pMove.speed = 5f;
+            accTimer = 0;
+        }
         
-        
+
+
     }
 }

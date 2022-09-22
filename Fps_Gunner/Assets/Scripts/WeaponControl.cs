@@ -31,8 +31,8 @@ public class WeaponControl : MonoBehaviour
         //Fire
         if (Input.GetMouseButtonDown(0) && (coolDown <= 0))
         {
-            Instantiate(bullet, firePoint.position, transform.rotation);
-            coolDown = 0.4f;
+            Instantiate(bullet, transform.position, transform.rotation); // transform.position yerine firepoint.position kullanýp offset ayarlarinda kucuk degisikler yapilabilir
+            coolDown = 0.32f;
             //Sound
             GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(gunShot);
             //Animation
