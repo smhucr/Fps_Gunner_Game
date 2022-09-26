@@ -13,7 +13,7 @@ public class JumpAndGravity : MonoBehaviour
     public float jumpSpeed = 30f;
     private bool isGround;
     public Transform groundChecker;
-    public float groundCheckerRadius;
+    private float groundCheckerRadius = 0.1f;
     public LayerMask obstacleLayer;
     private float accTimer;
     private void Awake()
@@ -33,6 +33,7 @@ public class JumpAndGravity : MonoBehaviour
         }
         else
         {
+
             velocity.y = 0f;
             pMove.speed = 5f;
         }
@@ -52,11 +53,11 @@ public class JumpAndGravity : MonoBehaviour
         }
         if (isGround)
         {
-            velocity.y = 0.1f;
+            //velocity.y = 0.1f; // Buradaki sahis obstacle objenin kosesine gelince autojump ozelligini aktif ediyor
             pMove.speed = 5f;
             accTimer = 0;
         }
-        
+
 
 
     }
