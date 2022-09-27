@@ -12,6 +12,10 @@ public class DroneAI : MonoBehaviour
     private float follow_speed = 10f;
     //Rotate
     private float rotate_speed = 4f;
+    //Timer
+    private float coolDown = 2f;
+    //Drone //2 kez drone icinde drone yapiyoruz cunku animasyon kodlarý durduruyor
+    public GameObject droneEnemy;
 
     private void Awake()
     {
@@ -20,13 +24,14 @@ public class DroneAI : MonoBehaviour
     private void Update()
     {
         FollowPlayer();
+        Shoot();
     }
 
     private void FollowPlayer()
     {
         //Drone Look Player
         transform.LookAt(player.position);
-       // transform.rotation *= Quaternion.Euler(new Vector3(0,0,0)); // offset ayarý eger drone duzgun bakmassa
+        // transform.rotation *= Quaternion.Euler(new Vector3(0,0,0)); // offset ayarý eger drone duzgun bakmassa
         //Drone Moving to Player
         if (Vector3.Distance(transform.position, player.position) >= follow_distance)
         {
@@ -35,7 +40,21 @@ public class DroneAI : MonoBehaviour
         }
         else
         {
-            transform.RotateAround(player.position, new Vector3(0, 1, 0) , Time.deltaTime * follow_speed * rotate_speed); // 2. parametre transform.forward hatali
+            transform.RotateAround(player.position, new Vector3(0, 1, 0), Time.deltaTime * follow_speed * rotate_speed); // 2. parametre transform.forward hatali
+        }
+    }
+
+    private void Shoot()
+    {
+        if (coolDown > 0)
+        {
+            coolDown -= Time.deltaTime;
+        }
+        else
+        {
+            coolDown = 2f;
+            //Shot
+            droneEnemy.GetComponent<Animator>().SetTrigger("Shoot");
         }
     }
 }
