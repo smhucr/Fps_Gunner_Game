@@ -17,6 +17,7 @@ public class DroneAI : MonoBehaviour
     //Drone //2 kez drone icinde drone yapiyoruz cunku animasyon kodlarý durduruyor
     public GameObject droneEnemy;
     public GameObject droneBullet;
+    public GameObject firePoint;
 
     private void Awake()
     {
@@ -56,7 +57,7 @@ public class DroneAI : MonoBehaviour
             coolDown = 2f;
             //Shot
             droneEnemy.GetComponent<Animator>().SetTrigger("Shoot");
-            Instantiate(droneBullet,transform.position,transform.rotation * Quaternion.Euler(new Vector3(0,90,0)));
+            Instantiate(droneBullet,firePoint.transform.position,transform.rotation * Quaternion.Euler(new Vector3(0,90,0))); //firepoint kullanma sebebi drone da obstacle bundan dolayi collision engelliyor
         }
     }
 }
