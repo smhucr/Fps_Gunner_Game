@@ -585,8 +585,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1605237751}
   - component: {fileID: 1605237750}
-  - component: {fileID: 1605237749}
   - component: {fileID: 1605237752}
+  - component: {fileID: 1605237749}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1283,6 +1283,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 407712128}
     - target: {fileID: 2418565137341169241, guid: 451ec26190a03df4cbbaebbcf409140e, type: 3}
+      propertyPath: gunShot
+      value: 
+      objectReference: {fileID: 8300000, guid: d93670ebda7dec64dad1aa61844743cd, type: 3}
+    - target: {fileID: 2418565137341169241, guid: 451ec26190a03df4cbbaebbcf409140e, type: 3}
       propertyPath: obstacleLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -1356,6 +1360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Drone
       objectReference: {fileID: 0}
+    - target: {fileID: 8372397544992113314, guid: c410abe6117f01d4bac81747e6585e04, type: 3}
+      propertyPath: droneBullet
+      value: 
+      objectReference: {fileID: 6181721751986598612, guid: 019598c0679f4c7498be067c7fc7ff13, type: 3}
     - target: {fileID: 8372397544992113315, guid: c410abe6117f01d4bac81747e6585e04, type: 3}
       propertyPath: m_RootOrder
       value: 1

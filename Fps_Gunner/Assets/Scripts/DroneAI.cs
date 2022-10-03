@@ -7,7 +7,7 @@ public class DroneAI : MonoBehaviour
     //Player
     private Transform player;
     //Distance
-    private float follow_distance = 15f;
+    private float follow_distance = 20f;
     //Follow
     private float follow_speed = 10f;
     //Rotate
@@ -16,6 +16,7 @@ public class DroneAI : MonoBehaviour
     private float coolDown = 2f;
     //Drone //2 kez drone icinde drone yapiyoruz cunku animasyon kodlarý durduruyor
     public GameObject droneEnemy;
+    public GameObject droneBullet;
 
     private void Awake()
     {
@@ -55,6 +56,7 @@ public class DroneAI : MonoBehaviour
             coolDown = 2f;
             //Shot
             droneEnemy.GetComponent<Animator>().SetTrigger("Shoot");
+            Instantiate(droneBullet,transform.position,transform.rotation * Quaternion.Euler(new Vector3(0,90,0)));
         }
     }
 }
