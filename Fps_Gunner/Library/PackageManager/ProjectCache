@@ -5,27 +5,27 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637993475509076130
-    m_Hash: 386263368
+      ticks: 638004884441520996
+    m_Hash: 3763849966
   m_LockFileStatus:
     m_FilePath: C:/Users/smhuc/Desktop/Unity/Fps_Gunner_Game/Fps_Gunner/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637993475805807693
-    m_Hash: 4238008537
+      ticks: 638004884687437682
+    m_Hash: 3905128264
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
-    - packageId: com.unity.collab-proxy@1.17.0
+    - packageId: com.unity.collab-proxy@1.17.2
       testable: 0
       isDirectDependency: 1
-      version: 1.17.0
+      version: 1.17.2
       source: 1
-      resolvedPath: C:\Users\smhuc\Desktop\Unity\Fps_Gunner_Game\Fps_Gunner\Library\PackageCache\com.unity.collab-proxy@1.17.0
+      resolvedPath: C:\Users\smhuc\Desktop\Unity\Fps_Gunner_Game\Fps_Gunner\Library\PackageCache\com.unity.collab-proxy@1.17.2
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Version Control
@@ -104,8 +104,6 @@ m_PackageAssets:
         - 2.1.0-preview.5
         - 2.1.0-preview.6
         compatible:
-        - 1.17.0
-        - 1.17.1
         - 1.17.2
         - 2.0.0-preview.6
         - 2.0.0-preview.8
@@ -152,20 +150,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637914260330000000
+      datePublishedTicks: 637937432480000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
-        revision: de2fce09233dd85d080b9609cade4b0bba9ee709
+        revision: 14d129dcc778f8ea2fdf9d0240b47924e4f0dbb1
         path: 
-    - packageId: com.unity.ide.rider@2.0.7
+    - packageId: com.unity.ide.rider@3.0.15
       testable: 0
       isDirectDependency: 1
-      version: 2.0.7
+      version: 3.0.15
       source: 1
-      resolvedPath: C:\Users\smhuc\Desktop\Unity\Fps_Gunner_Game\Fps_Gunner\Library\PackageCache\com.unity.ide.rider@2.0.7
+      resolvedPath: C:\Users\smhuc\Desktop\Unity\Fps_Gunner_Game\Fps_Gunner\Library\PackageCache\com.unity.ide.rider@3.0.15
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
@@ -245,19 +243,13 @@ m_PackageAssets:
         - 3.0.13
         - 3.0.14
         - 3.0.15
-        verified: 2.0.7
+        verified: 3.0.15
       dependencies:
-      - name: com.unity.test-framework
-        version: 1.1.1
-      resolvedDependencies:
-      - name: com.unity.test-framework
-        version: 1.1.31
       - name: com.unity.ext.nunit
         version: 1.0.6
-      - name: com.unity.modules.imgui
-        version: 1.0.0
-      - name: com.unity.modules.jsonserialize
-        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.ext.nunit
+        version: 1.0.6
       keywords: []
       registry:
         id: main
@@ -271,13 +263,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637334461080000000
+      datePublishedTicks: 637914298700000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
-        revision: abb44f053e9a41d2e00e149e32a19bcec76e98b4
+        revision: b61ff0378932fdf03b5891e09c91728337de674c
         path: 
     - packageId: com.unity.ide.visualstudio@2.0.16
       testable: 0
@@ -447,12 +439,12 @@ m_PackageAssets:
         url: https://github.com/Unity-Technologies/com.unity.ide.vscode.git
         revision: b0740c80bfc2440527c317109f7c3d9100132722
         path: 
-    - packageId: com.unity.render-pipelines.universal@10.9.0
+    - packageId: com.unity.render-pipelines.universal@10.10.0
       testable: 0
       isDirectDependency: 1
-      version: 10.9.0
+      version: 10.10.0
       source: 1
-      resolvedPath: C:\Users\smhuc\Desktop\Unity\Fps_Gunner_Game\Fps_Gunner\Library\PackageCache\com.unity.render-pipelines.universal@10.9.0
+      resolvedPath: C:\Users\smhuc\Desktop\Unity\Fps_Gunner_Game\Fps_Gunner\Library\PackageCache\com.unity.render-pipelines.universal@10.10.0
       assetPath: Packages/com.unity.render-pipelines.universal
       name: com.unity.render-pipelines.universal
       displayName: Universal RP
@@ -515,21 +507,20 @@ m_PackageAssets:
         - 10.9.0
         - 10.10.0
         compatible:
-        - 10.9.0
         - 10.10.0
-        verified: 10.9.0
+        verified: 10.10.0
       dependencies:
       - name: com.unity.mathematics
         version: 1.1.0
       - name: com.unity.render-pipelines.core
-        version: 10.9.0
+        version: 10.10.0
       - name: com.unity.shadergraph
-        version: 10.9.0
+        version: 10.10.0
       resolvedDependencies:
       - name: com.unity.mathematics
         version: 1.1.0
       - name: com.unity.render-pipelines.core
-        version: 10.9.0
+        version: 10.10.0
       - name: com.unity.ugui
         version: 1.0.0
       - name: com.unity.modules.ui
@@ -541,7 +532,7 @@ m_PackageAssets:
       - name: com.unity.modules.jsonserialize
         version: 1.0.0
       - name: com.unity.shadergraph
-        version: 10.9.0
+        version: 10.10.0
       - name: com.unity.searcher
         version: 4.3.2
       keywords:
@@ -563,13 +554,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637853737940000000
+      datePublishedTicks: 637933948700000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.com/Unity-Technologies/Graphics.git
-        revision: 5a193e907cafca7b2fa290618e18c3f28a3b451b
+        revision: d3e1f462605e8d8f5acfb626b8e118201ebada27
         path: 
     - packageId: com.unity.test-framework@1.1.31
       testable: 0
@@ -2955,12 +2946,12 @@ m_PackageAssets:
         url: git@github.com:Unity-Technologies/Unity.Mathematics.git
         revision: 0a3dfafaf606098ea681de4c4be60f3aac63b773
         path: 
-    - packageId: com.unity.render-pipelines.core@10.9.0
+    - packageId: com.unity.render-pipelines.core@10.10.0
       testable: 0
       isDirectDependency: 0
-      version: 10.9.0
+      version: 10.10.0
       source: 1
-      resolvedPath: C:\Users\smhuc\Desktop\Unity\Fps_Gunner_Game\Fps_Gunner\Library\PackageCache\com.unity.render-pipelines.core@10.9.0
+      resolvedPath: C:\Users\smhuc\Desktop\Unity\Fps_Gunner_Game\Fps_Gunner\Library\PackageCache\com.unity.render-pipelines.core@10.10.0
       assetPath: Packages/com.unity.render-pipelines.core
       name: com.unity.render-pipelines.core
       displayName: Core RP Library
@@ -3079,9 +3070,8 @@ m_PackageAssets:
         - 10.9.0
         - 10.10.0
         compatible:
-        - 10.9.0
         - 10.10.0
-        verified: 10.9.0
+        verified: 10.10.0
       dependencies:
       - name: com.unity.ugui
         version: 1.0.0
@@ -3113,20 +3103,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637853736930000000
+      datePublishedTicks: 637933947740000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.com/Unity-Technologies/Graphics.git
-        revision: 5a193e907cafca7b2fa290618e18c3f28a3b451b
+        revision: d3e1f462605e8d8f5acfb626b8e118201ebada27
         path: 
-    - packageId: com.unity.shadergraph@10.9.0
+    - packageId: com.unity.shadergraph@10.10.0
       testable: 0
       isDirectDependency: 0
-      version: 10.9.0
+      version: 10.10.0
       source: 1
-      resolvedPath: C:\Users\smhuc\Desktop\Unity\Fps_Gunner_Game\Fps_Gunner\Library\PackageCache\com.unity.shadergraph@10.9.0
+      resolvedPath: C:\Users\smhuc\Desktop\Unity\Fps_Gunner_Game\Fps_Gunner\Library\PackageCache\com.unity.shadergraph@10.10.0
       assetPath: Packages/com.unity.shadergraph
       name: com.unity.shadergraph
       displayName: Shader Graph
@@ -3242,17 +3232,16 @@ m_PackageAssets:
         - 10.9.0
         - 10.10.0
         compatible:
-        - 10.9.0
         - 10.10.0
-        verified: 10.9.0
+        verified: 10.10.0
       dependencies:
       - name: com.unity.render-pipelines.core
-        version: 10.9.0
+        version: 10.10.0
       - name: com.unity.searcher
         version: 4.3.2
       resolvedDependencies:
       - name: com.unity.render-pipelines.core
-        version: 10.9.0
+        version: 10.10.0
       - name: com.unity.ugui
         version: 1.0.0
       - name: com.unity.modules.ui
@@ -3278,13 +3267,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637853737050000000
+      datePublishedTicks: 637933947850000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.com/Unity-Technologies/Graphics.git
-        revision: 5a193e907cafca7b2fa290618e18c3f28a3b451b
+        revision: d3e1f462605e8d8f5acfb626b8e118201ebada27
         path: 
     - packageId: com.unity.services.core@1.0.1
       testable: 0
@@ -3390,9 +3379,39 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 4.0.0-preview
+        - 4.0.0
+        - 4.0.7-preview
+        - 4.0.7
+        - 4.0.8-preview
+        - 4.0.9
+        - 4.1.0-preview
+        - 4.1.0
+        - 4.2.0
+        - 4.3.0
+        - 4.3.1
         - 4.3.2
+        - 4.6.0-preview
+        - 4.7.0-preview
+        - 4.9.1
+        - 4.9.2
         compatible:
+        - 4.0.0-preview
+        - 4.0.0
+        - 4.0.7-preview
+        - 4.0.7
+        - 4.0.8-preview
+        - 4.0.9
+        - 4.1.0-preview
+        - 4.1.0
+        - 4.2.0
+        - 4.3.0
+        - 4.3.1
         - 4.3.2
+        - 4.6.0-preview
+        - 4.7.0-preview
+        - 4.9.1
+        - 4.9.2
         verified: 4.3.2
       dependencies: []
       resolvedDependencies: []
@@ -3411,7 +3430,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637509898070000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -3422,4 +3441,4 @@ m_PackageAssets:
   m_LocalPackages:
     m_LocalFileStatus: []
 m_ProjectPath: C:/Users/smhuc/Desktop/Unity/Fps_Gunner_Game/Fps_Gunner/Packages
-m_EditorVersion: 2020.3.37f1 (8c66806a0c04)
+m_EditorVersion: 2020.3.40f1 (ba48d4efcef1)
