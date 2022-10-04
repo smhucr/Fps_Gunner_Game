@@ -16,6 +16,7 @@ public class JumpAndGravity : MonoBehaviour
     private float groundCheckerRadius = 0.1f;
     public LayerMask obstacleLayer;
     private float accTimer;
+    private int x;
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -23,6 +24,7 @@ public class JumpAndGravity : MonoBehaviour
     }
     private void Update()
     {
+        
         isGround = Physics.CheckSphere(groundChecker.position, groundCheckerRadius, obstacleLayer);
         if (!isGround)
         {
@@ -57,8 +59,6 @@ public class JumpAndGravity : MonoBehaviour
             pMove.speed = 5f;
             accTimer = 0;
         }
-
-
-
+    
     }
 }

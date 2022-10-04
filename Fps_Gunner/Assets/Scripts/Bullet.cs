@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private float speed = 60f;
+    private float speed = 70f;
 
     public float lifetime = 5f;
 
@@ -16,6 +16,16 @@ public class Bullet : MonoBehaviour
         if (lifetime < 0)
         {
             Destroy(this.gameObject);
+        }
+       
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            print("sa");
         }
     }
 }
