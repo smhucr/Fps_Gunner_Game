@@ -205,6 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 2
+  metal_hit_effect: {fileID: 6351522024793774337, guid: 98439f9b6771a634d9de51356b75d867, type: 3}
 --- !u!65 &9056099354690553194
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -216,7 +217,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.00224639, y: 0.0011710887, z: 0.0011710888}
+  m_Size: {x: 0.0025, y: 0.0014, z: 0.0014}
   m_Center: {x: -0.000033748423, y: 0.0000007981433, z: -0.0000002412707}
 --- !u!54 &962448871186325512
 Rigidbody:

@@ -18,6 +18,8 @@ public class DroneAI : MonoBehaviour
     public GameObject droneEnemy;
     public GameObject droneBullet;
     public GameObject firePoint;
+    //Drone Health
+    public float health = 100f;
 
     private void Awake()
     {
@@ -27,6 +29,7 @@ public class DroneAI : MonoBehaviour
     {
         FollowPlayer();
         Shoot();
+        droneDeath();
     }
 
     private void FollowPlayer()
@@ -57,7 +60,14 @@ public class DroneAI : MonoBehaviour
             coolDown = 2f;
             //Shot
             droneEnemy.GetComponent<Animator>().SetTrigger("Shoot");
-            Instantiate(droneBullet,firePoint.transform.position,transform.rotation * Quaternion.Euler(new Vector3(0,90,0))); //firepoint kullanma sebebi drone da obstacle bundan dolayi collision engelliyor
+            Instantiate(droneBullet, firePoint.transform.position, transform.rotation * Quaternion.Euler(new Vector3(0, 90, 0))); //firepoint kullanma sebebi drone da obstacle bundan dolayi collision engelliyor
+        }
+    }
+    public void droneDeath()
+    {
+        if(health <= 0)
+        {
+            Destroy(this.gameObject);
         }
     }
 }
