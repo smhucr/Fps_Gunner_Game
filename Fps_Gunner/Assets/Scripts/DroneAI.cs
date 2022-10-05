@@ -20,6 +20,11 @@ public class DroneAI : MonoBehaviour
     public GameObject firePoint;
     //Drone Health
     public float health = 100f;
+    //Particles
+    public ParticleSystem death_Effect;
+    //Sounds
+    public AudioClip drone_Shoot;
+    public AudioClip drone_Death;
 
     private void Awake()
     {
@@ -60,14 +65,27 @@ public class DroneAI : MonoBehaviour
             coolDown = 2f;
             //Shot
             droneEnemy.GetComponent<Animator>().SetTrigger("Shoot");
-            Instantiate(droneBullet, firePoint.transform.position, transform.rotation * Quaternion.Euler(new Vector3(0, 90, 0))); //firepoint kullanma sebebi drone da obstacle bundan dolayi collision engelliyor
+
+            StartCoroutine(beforeShoot());
+
         }
     }
     public void droneDeath()
     {
-        if(health <= 0)
+        //Spawn Particle
+        //Destroy Drone
+        if (health <= 0)
         {
+            Instantiate(death_Effect, transform.position, Quaternion.identity);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(drone_Death);
             Destroy(this.gameObject);
         }
+    }
+    IEnumerator beforeShoot()
+    {
+        //IEnumerator de yapmamýn sebebi sarj olup vuruyormus gibi yapmak
+        GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(drone_Shoot, 0.4f);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(droneBullet, firePoint.transform.position, transform.rotation * Quaternion.Euler(new Vector3(0, 90, 0))); //firepoint kullanma sebebi drone da obstacle bundan dolayi collision engelliyor
     }
 }
