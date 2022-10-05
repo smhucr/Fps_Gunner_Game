@@ -8,8 +8,8 @@ public class JumpAndGravity : MonoBehaviour
     public PlayerMovement pMove;
     private Vector3 velocity;
     private float gravity = -9.807f;
-    public float gravityDivide = 100f;
-    public float jumpHeight = 0.1f;
+    private float gravityDivide = 100f;
+    private float jumpHeight = 0.1f;
     public float jumpSpeed = 30f;
     private bool isGround;
     public Transform groundChecker;

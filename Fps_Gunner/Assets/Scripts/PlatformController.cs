@@ -11,6 +11,7 @@ public class PlatformController : MonoBehaviour
     {
         if (Physics.CheckBox(checker.position, new Vector3(1, 0.5f, 1), Quaternion.identity, player_layer))
         {
+            
             StartCoroutine(FallWait());
         }
         if (is_Touch)

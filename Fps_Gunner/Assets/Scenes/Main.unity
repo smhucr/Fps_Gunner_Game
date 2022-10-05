@@ -1298,8 +1298,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pMove: {fileID: 2080330605}
-  gravityDivide: 100
-  jumpHeight: 0.04
   jumpSpeed: 20
   groundChecker: {fileID: 115129350}
   obstacleLayer:
