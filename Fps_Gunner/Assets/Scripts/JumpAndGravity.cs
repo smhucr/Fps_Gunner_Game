@@ -8,7 +8,7 @@ public class JumpAndGravity : MonoBehaviour
     public PlayerMovement pMove;
     private Vector3 velocity;
     private float gravity = -9.807f;
-    private float gravityDivide = 100f;
+    private float gravityDivide = 200f;
     private float jumpHeight = 0.1f;
     public float jumpSpeed = 30f;
     private bool isGround;
@@ -24,7 +24,7 @@ public class JumpAndGravity : MonoBehaviour
     }
     private void Update()
     {
-        
+
         isGround = Physics.CheckSphere(groundChecker.position, groundCheckerRadius, obstacleLayer);
         if (!isGround)
         {
@@ -41,7 +41,7 @@ public class JumpAndGravity : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) && isGround)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity / gravityDivide);
+            velocity.y = Mathf.Sqrt(jumpHeight * -0.7f * gravity / gravityDivide);
         }
         controller.Move(velocity);
     }
@@ -59,6 +59,6 @@ public class JumpAndGravity : MonoBehaviour
             pMove.speed = 5f;
             accTimer = 0;
         }
-    
+
     }
 }
