@@ -9,7 +9,7 @@ public class JumpAndGravity : MonoBehaviour
     private Vector3 velocity;
     private float gravity = -9.807f;
     private float gravityDivide = 200f;
-    private float jumpHeight = 0.1f;
+    private float jumpHeight = 17f;
     public float jumpSpeed = 30f;
     private bool isGround;
     public Transform groundChecker;
@@ -41,13 +41,13 @@ public class JumpAndGravity : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) && isGround)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -0.7f * gravity / gravityDivide);
+            velocity.y = Mathf.Sqrt(jumpHeight * -0.7f * gravity / gravityDivide * Time.deltaTime);
         }
         controller.Move(velocity);
     }
     IEnumerator AfterJumpWaitOne()
     {
-        yield return new WaitForSeconds(1.7f);
+        yield return new WaitForSeconds(2f);
         if (!isGround)
         {
             pMove.speed = Mathf.Lerp(5f, jumpSpeed, accTimer);
