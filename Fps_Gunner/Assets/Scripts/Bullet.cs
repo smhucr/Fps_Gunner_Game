@@ -25,8 +25,6 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
-
 
 
         //When hit enemy
