@@ -12,6 +12,7 @@ public class JumpAndGravity : MonoBehaviour
     private float jumpHeight = 17f;
     public float jumpSpeed = 30f;
     private bool isGround;
+    public bool inCollumn = false;
     public Transform groundChecker;
     private float groundCheckerRadius = 0.1f;
     public LayerMask obstacleLayer;
@@ -37,9 +38,13 @@ public class JumpAndGravity : MonoBehaviour
         {
 
             velocity.y = 0f;
-            pMove.speed = 5f;
+            pMove.speed = 10f;
         }
         if (Input.GetKeyDown(KeyCode.Space) && isGround)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -0.7f * gravity / gravityDivide * Time.deltaTime);
+        }
+        else if(Input.GetKeyDown(KeyCode.Space) && inCollumn)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -0.7f * gravity / gravityDivide * Time.deltaTime);
         }
@@ -56,7 +61,7 @@ public class JumpAndGravity : MonoBehaviour
         if (isGround)
         {
             //velocity.y = 0.1f; // Buradaki sahis obstacle objenin kosesine gelince autojump ozelligini aktif ediyor
-            pMove.speed = 5f;
+            pMove.speed = 10f;
             accTimer = 0;
         }
 

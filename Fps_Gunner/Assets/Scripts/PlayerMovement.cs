@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
-    public float speed = 2f;
+    public float speed;
     private void Awake()
     {
         controller = GetComponent<CharacterController>();

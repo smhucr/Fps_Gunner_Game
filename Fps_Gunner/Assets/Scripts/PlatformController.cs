@@ -9,7 +9,7 @@ public class PlatformController : MonoBehaviour
     private bool is_Touch = false;
     private void Update()
     {
-        if (Physics.CheckBox(checker.position, new Vector3(1, 0.5f, 1), Quaternion.identity, player_layer))
+        if (Physics.CheckBox(checker.position, new Vector3(2, 0.5f, 2), Quaternion.identity, player_layer))
         {
             
             StartCoroutine(FallWait());
