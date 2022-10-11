@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5239219755372537232}
   - component: {fileID: 5239219755372537233}
   - component: {fileID: 5239219755372537234}
-  - component: {fileID: 5239219755372537235}
+  - component: {fileID: 5055171748514169276}
   - component: {fileID: 5239219755372537247}
   m_Layer: 6
   m_Name: Drone Variant
@@ -85,8 +85,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5239219755372537235
-MeshCollider:
+--- !u!65 &5055171748514169276
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -95,10 +95,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 28723f10c2a8e094a9351e892f5271b8, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 3.5754952, y: 3.3034472, z: 3.9624016}
+  m_Center: {x: -0.000000059604645, y: 0.1767767, z: 0.00000011920929}
 --- !u!95 &5239219755372537247
 Animator:
   serializedVersion: 3

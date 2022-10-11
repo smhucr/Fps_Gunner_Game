@@ -4481,7 +4481,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2347828061260654590}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: 6.1, y: 30.399998, z: -62.5}
+  m_LocalPosition: {x: 0.9, y: 30.399998, z: -63.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 473467292185699039}
@@ -4514,6 +4514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lm: {fileID: 8430291303841774573}
   enter: 0
+  counterForLevels: 0
 --- !u!1 &2392173735359666989
 GameObject:
   m_ObjectHideFlags: 0
@@ -11002,7 +11003,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6677998401603591245}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: 4.9, y: 30.399998, z: 33.8}
+  m_LocalPosition: {x: 4.97, y: 30.399998, z: 35.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 473467292185699039}
@@ -11035,6 +11036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lm: {fileID: 8430291303841774573}
   enter: 1
+  counterForLevels: 0
 --- !u!1 &6777782282920475121
 GameObject:
   m_ObjectHideFlags: 0
@@ -11379,7 +11381,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7425102078514573241}
-  m_LocalRotation: {x: -0, y: -0.0056634536, z: 0, w: 0.99998397}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.3, y: -14.806046, z: -14}
   m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children:
@@ -11750,7 +11752,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8436021818146769720}
-  m_LocalRotation: {x: -0, y: 0.0056634536, z: -0, w: 0.99998397}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 14.80605, z: -95.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11783,7 +11785,7 @@ Transform:
   - {fileID: 5909747960848747226}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0.649, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8430291303841774573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11796,13 +11798,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b3131e2d1dd949af49f814eea995d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCountFive: 0
+  isCountTen: 0
   player_Enter: 0
   player_exit: 0
+  isSpawned: 0
   drone_Spawners:
   - {fileID: 6815205173034279855}
   - {fileID: 603709545207059865}
   - {fileID: 7510886375489253214}
   drone: {fileID: 5239219755720680378, guid: c410abe6117f01d4bac81747e6585e04, type: 3}
+  closing_Wall_Normal: {fileID: 1224186632189068859, guid: 8d4449668319da943af20d04f80225bf, type: 3}
+  closing_Wall_Turned: {fileID: 7692568531049661774, guid: 376ed9b7eef63894d82cb5d8291b846c, type: 3}
+  level:
+  - {fileID: 1480594789805716876, guid: 44ac7a2ffbdc3e84a92193a056678e03, type: 3}
+  - {fileID: 6396682023546289402, guid: a923fb9c0d6a6b34283dc00a0cafc977, type: 3}
+  - {fileID: 8659698295046264420, guid: 71b27d882a6209c47b1b18c964db2058, type: 3}
+  - {fileID: 8436021818146769720}
+  - {fileID: 6217746694758898317, guid: 57d371ead7fcc984696009189606aea4, type: 3}
+  destroy_Level: {fileID: 0}
 --- !u!1 &8851396128879115288
 GameObject:
   m_ObjectHideFlags: 0

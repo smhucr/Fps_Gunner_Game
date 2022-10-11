@@ -6,6 +6,8 @@ public class EnterLevel : MonoBehaviour
 {
     public LevelManager Lm;
     public bool enter;
+    public int counterForLevels;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,12 +15,25 @@ public class EnterLevel : MonoBehaviour
         {
             if (enter)
             {
+                if (!Lm.player_Enter)
+                    other.GetComponent<PlayerManager>().counter++;
                 Lm.player_Enter = true;
+                counterForLevels = other.GetComponent<PlayerManager>().counter;
+                if (counterForLevels >= 5)
+                    Lm.isCountFive = true;
+                if (counterForLevels >= 10)
+                    Lm.isCountTen = true;
             }
             else
             {
                 Lm.player_exit = true;
             }
-        }   
+            if(other.GetComponent<PlayerManager>().tempWall != null)
+            {
+                Destroy(other.GetComponent<PlayerManager>().tempWall);
+            }
+
+        }
+
     }
 }

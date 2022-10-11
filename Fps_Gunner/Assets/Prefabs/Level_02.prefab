@@ -5999,7 +5999,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2349810529580897086}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: 5.02, y: 30.399998, z: 34.42}
+  m_LocalPosition: {x: 4.97, y: 30.399998, z: 35.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3117976053347357981}
@@ -6032,6 +6032,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lm: {fileID: 3403571037132105214}
   enter: 1
+  counterForLevels: 0
 --- !u!1 &2352861682745904144
 GameObject:
   m_ObjectHideFlags: 0
@@ -10433,7 +10434,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5394206576216053883}
-  m_LocalRotation: {x: -0, y: -0.0056634536, z: 0, w: 0.99998397}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.3, y: -14.806046, z: -14}
   m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children:
@@ -10995,7 +10996,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6396682023546289402}
-  m_LocalRotation: {x: -0, y: 0.0056634536, z: -0, w: 0.99998397}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 14.80605, z: -93.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11027,7 +11028,7 @@ Transform:
   - {fileID: 6331339639444837378}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0.649, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3403571037132105214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11040,13 +11041,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b3131e2d1dd949af49f814eea995d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCountFive: 0
+  isCountTen: 0
   player_Enter: 0
   player_exit: 0
+  isSpawned: 0
   drone_Spawners:
   - {fileID: 6346309379943183496}
   - {fileID: 12983953149528202}
   - {fileID: 3494863822920628035}
   drone: {fileID: 5239219755720680378, guid: c410abe6117f01d4bac81747e6585e04, type: 3}
+  closing_Wall_Normal: {fileID: 1224186632189068859, guid: 8d4449668319da943af20d04f80225bf, type: 3}
+  closing_Wall_Turned: {fileID: 7692568531049661774, guid: 376ed9b7eef63894d82cb5d8291b846c, type: 3}
+  level:
+  - {fileID: 1480594789805716876, guid: 44ac7a2ffbdc3e84a92193a056678e03, type: 3}
+  - {fileID: 6396682023546289402}
+  - {fileID: 8659698295046264420, guid: 71b27d882a6209c47b1b18c964db2058, type: 3}
+  - {fileID: 8436021818146769720, guid: 4923bede93723414fb99266348dedbd3, type: 3}
+  - {fileID: 6217746694758898317, guid: 57d371ead7fcc984696009189606aea4, type: 3}
+  destroy_Level: {fileID: 0}
 --- !u!1 &6651724143261077817
 GameObject:
   m_ObjectHideFlags: 0
@@ -11606,7 +11619,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8086427201559137108}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: 6.22, y: 30.399998, z: -61.88}
+  m_LocalPosition: {x: 0.9, y: 30.399998, z: -63.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3117976053347357981}
@@ -11639,6 +11652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lm: {fileID: 3403571037132105214}
   enter: 0
+  counterForLevels: 0
 --- !u!1 &8315208485087046563
 GameObject:
   m_ObjectHideFlags: 0
