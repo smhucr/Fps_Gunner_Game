@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     //CounterChecker
-    public bool isCountFive = false, isCountTen = false;
+    public bool isCountFive = false, isCountTen = false, isCountEleven = false;
 
     //Player enter exit
     public bool player_Enter, player_exit;
@@ -24,16 +24,17 @@ public class LevelManager : MonoBehaviour
     //Level Spawn
     public GameObject[] level;
     public GameObject destroy_Level;
+    public GameObject finalLevel;
 
     private void Awake()
     {
         player_Enter = false;
         isSpawned = false;
     }
-        
+
     private void Update()
     {
-       
+
         //drone spawn
         if (!isSpawned)
         {
@@ -44,8 +45,18 @@ public class LevelManager : MonoBehaviour
                     Instantiate(drone, drone_Spawners[i].position, Quaternion.identity);
 
                 //Spawn Level
-                SpawnLevel();
+                if (!isCountEleven)
+                {
+                    if (!isCountTen)
+                    {
+                        SpawnLevel();
+                    }
 
+                    else if (isCountTen)
+                    {
+                        SpawnFinalLevel();
+                    }
+                }
                 //set bool
                 isSpawned = true;
 
@@ -75,6 +86,11 @@ public class LevelManager : MonoBehaviour
         GameObject new_Level = Instantiate(level[Random.Range(0, level.Length)], pos, Quaternion.identity * Quaternion.Euler(new Vector3(0, 180, 0)));
         new_Level.GetComponent<LevelManager>().destroy_Level = this.gameObject;
 
+    }
+    private void SpawnFinalLevel()
+    {
+        Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z + 528);
+        GameObject new_Level = Instantiate(finalLevel, pos, Quaternion.identity);
     }
 
     private void DestroyLevel()

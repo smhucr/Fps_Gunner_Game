@@ -3,7 +3,12 @@ guid: d64b3131e2d1dd949af49f814eea995d
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - drone: {instanceID: 0}
+  - closing_Wall_Normal: {instanceID: 0}
+  - closing_Wall_Turned: {instanceID: 0}
+  - destroy_Level: {instanceID: 0}
+  - finalLevel: {fileID: 5263602493564557437, guid: 91690d4fb4631d74f99d4802cd2c95f7, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

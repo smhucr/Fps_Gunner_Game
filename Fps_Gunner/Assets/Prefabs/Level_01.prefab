@@ -1003,6 +1003,7 @@ MonoBehaviour:
   - {fileID: 8436021818146769720, guid: 4923bede93723414fb99266348dedbd3, type: 3}
   - {fileID: 6217746694758898317, guid: 57d371ead7fcc984696009189606aea4, type: 3}
   destroy_Level: {fileID: 0}
+  finalLevel: {fileID: 5263602493564557437, guid: 91690d4fb4631d74f99d4802cd2c95f7, type: 3}
 --- !u!1 &1491944171162214281
 GameObject:
   m_ObjectHideFlags: 0

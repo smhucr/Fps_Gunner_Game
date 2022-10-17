@@ -21,8 +21,10 @@ public class EnterLevel : MonoBehaviour
                 counterForLevels = other.GetComponent<PlayerManager>().counter;
                 if (counterForLevels >= 5)
                     Lm.isCountFive = true;
-                if (counterForLevels >= 10)
+                if (counterForLevels == 10)
                     Lm.isCountTen = true;
+                if (counterForLevels >= 11)
+                    Lm.isCountEleven = true;
             }
             else
             {
