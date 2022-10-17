@@ -33,7 +33,7 @@ public class LevelManager : MonoBehaviour
         
     private void Update()
     {
-
+       
         //drone spawn
         if (!isSpawned)
         {
@@ -90,4 +90,5 @@ public class LevelManager : MonoBehaviour
         Destroy(wall_front);
         Destroy(wall_behind);
     }
+
 }

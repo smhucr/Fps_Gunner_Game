@@ -30,6 +30,11 @@ public class Bullet : MonoBehaviour
         //When hit enemy
         if (other.CompareTag("Enemy"))
         {
+            GameObject Enemy = other.transform.gameObject;
+            Enemy.GetComponent<EnemyHealth>().enemyHealth -= 25f;
+        }
+        if (other.CompareTag("Drone"))
+        {
             GameObject droneEnemy = other.transform.parent.gameObject;
             droneEnemy.GetComponent<DroneAI>().health -= 25f;
         }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5239219755372537247}
   m_Layer: 6
   m_Name: Drone Variant
-  m_TagString: Enemy
+  m_TagString: Drone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 5239219754576446122}
   m_Layer: 0
   m_Name: Drone
-  m_TagString: Enemy
+  m_TagString: Drone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -460,7 +460,7 @@ MonoBehaviour:
   droneEnemy: {fileID: 5239219755372537237}
   droneBullet: {fileID: 6181721751986598612, guid: 019598c0679f4c7498be067c7fc7ff13, type: 3}
   firePoint: {fileID: 6577299496806862923}
-  health: 100
+  health: 75
   death_Effect: {fileID: 4197121676232355792, guid: 096192efb888c2848859cc0dfe1cb713, type: 3}
   drone_Shoot: {fileID: 8300000, guid: 137ea34f0584d5e48a8d8930836e0b03, type: 3}
   drone_Death: {fileID: 8300000, guid: e459603b1abac784c87f5d65546861a7, type: 3}

@@ -19,7 +19,7 @@ public class DroneAI : MonoBehaviour
     public GameObject droneBullet;
     public GameObject firePoint;
     //Drone Health
-    public float health = 100f;
+    public float health = 75f;
     //Particles
     public ParticleSystem death_Effect;
     //Sounds

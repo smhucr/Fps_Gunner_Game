@@ -651,10 +651,11 @@ GameObject:
   - component: {fileID: 1666242895909607691}
   - component: {fileID: 1666242895909607692}
   - component: {fileID: 1666242895909607693}
+  - component: {fileID: 6865294170694929109}
   - component: {fileID: 7231844541058847087}
   m_Layer: 6
   m_Name: Laser_Cube
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -739,6 +740,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6865294170694929109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666242895909607694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80a66e38e95961d42851c0946423132a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 50
 --- !u!114 &7231844541058847087
 MonoBehaviour:
   m_ObjectHideFlags: 0
