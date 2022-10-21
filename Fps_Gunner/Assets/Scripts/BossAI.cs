@@ -47,6 +47,7 @@ public class BossAI : MonoBehaviour
                 gameObject.transform.Translate(Vector3.right * Time.deltaTime * bossSpeed, Space.World);
                 isLeft = false;
                 isRight = true;
+                print("sa");
             }
         }
 

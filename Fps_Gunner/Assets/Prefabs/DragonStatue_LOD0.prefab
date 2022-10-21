@@ -140,8 +140,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLeft: 0
-  isRight: 0
+  isRight: 1
   health: 1000
   firePos: {fileID: 8152790606740911820}
   fireBreath: {fileID: 974788818702611252, guid: de7692c38cdc3a54cbd9e13f4d337e46, type: 3}
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 720, z: 0}

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FinalManager : MonoBehaviour
 {
+    //Dragon
+    public GameObject bossDragon;
     //ControlUnit
     [SerializeField]
     private bool isPlayed = false;
@@ -12,6 +14,7 @@ public class FinalManager : MonoBehaviour
     [SerializeField]
     private bool isCanDo = true;
 
+    private bool oneDo = true;
     //Player enter exit
     public bool player_Enter;
 
@@ -19,11 +22,19 @@ public class FinalManager : MonoBehaviour
     public Transform[] drone_Spawners;
     public GameObject drone;
 
+    //CloseWall
+    public GameObject backWall;
+
     private void Update()
     {
-
         if (player_Enter)
         {
+            if (oneDo)
+            {
+                bossDragon.SetActive(true);
+                backWall.SetActive(true);
+                oneDo = false;
+            }
             if (isCanDo)
             {
                 if (!isPlayed)
@@ -32,15 +43,10 @@ public class FinalManager : MonoBehaviour
                 }
                 if (isStartable)
                 {
-
                     StartCoroutine(DroneSpawn());
-
                 }
-            }
-
-
+            }   
         }
-
     }
     IEnumerator WaitForStarting()
     {
@@ -54,9 +60,7 @@ public class FinalManager : MonoBehaviour
         //Drone spawn
         for (int i = 0; i < drone_Spawners.Length - Random.Range(0, drone_Spawners.Length - 1); i++)
             Instantiate(drone, drone_Spawners[i].position, Quaternion.identity);
-
         yield return new WaitForSeconds(15f);
         isCanDo = true;
     }
-
 }
