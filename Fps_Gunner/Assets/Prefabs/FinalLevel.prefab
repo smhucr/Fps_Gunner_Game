@@ -32138,6 +32138,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &3296068517101407304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2080636904427662231}
+  m_Layer: 0
+  m_Name: DroneSpawner (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2080636904427662231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3296068517101407304}
+  m_LocalRotation: {x: -0, y: -0.0056634536, z: -0, w: 0.99998397}
+  m_LocalPosition: {x: 7.41, y: 118.2, z: 177.51}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4218958397223825818}
+  m_RootOrder: 40
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3307647738894812386
 GameObject:
   m_ObjectHideFlags: 0
@@ -44502,6 +44532,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &5162050346373678368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8707494978425246578}
+  m_Layer: 0
+  m_Name: DroneSpawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8707494978425246578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5162050346373678368}
+  m_LocalRotation: {x: -0, y: -0.0056634536, z: -0, w: 0.99998397}
+  m_LocalPosition: {x: -34.59, y: 96.2, z: 177.51}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4218958397223825818}
+  m_RootOrder: 39
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5170835572270894368
 GameObject:
   m_ObjectHideFlags: 0
@@ -45245,6 +45305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4218958397223825818}
+  - component: {fileID: 4495474715298732401}
   m_Layer: 0
   m_Name: FinalLevel
   m_TagString: Untagged
@@ -45301,9 +45362,34 @@ Transform:
   - {fileID: 4280045687883267603}
   - {fileID: 4548424355391778351}
   - {fileID: 4492143069060858290}
+  - {fileID: 475368171657572179}
+  - {fileID: 8707494978425246578}
+  - {fileID: 2080636904427662231}
+  - {fileID: 6266315842966636107}
+  - {fileID: 4448788191356739231}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4495474715298732401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5263602493564557437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6f907eb9304864bb9935ae891f3fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player_Enter: 0
+  drone_Spawners:
+  - {fileID: 475368171657572179}
+  - {fileID: 8707494978425246578}
+  - {fileID: 2080636904427662231}
+  - {fileID: 6266315842966636107}
+  - {fileID: 4448788191356739231}
+  drone: {fileID: 5239219755720680378, guid: c410abe6117f01d4bac81747e6585e04, type: 3}
 --- !u!1 &5270428413429307043
 GameObject:
   m_ObjectHideFlags: 0
@@ -53611,6 +53697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7496177468380232278}
   - component: {fileID: 9009466219915713891}
+  - component: {fileID: 5357822713882938129}
   m_Layer: 8
   m_Name: Enter_Trigger_Box
   m_TagString: Untagged
@@ -53645,6 +53732,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 90, z: 100}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5357822713882938129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6421460917685204685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4e849e42ad00a4d8dd4a7ffa764cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FinalMan: {fileID: 4495474715298732401}
+  enter: 1
 --- !u!1 &6422919523243967037
 GameObject:
   m_ObjectHideFlags: 0
@@ -55984,6 +56085,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6660815950239096087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6266315842966636107}
+  m_Layer: 0
+  m_Name: DroneSpawner (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6266315842966636107
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6660815950239096087}
+  m_LocalRotation: {x: -0, y: -0.0056634536, z: -0, w: 0.99998397}
+  m_LocalPosition: {x: -50.1, y: 118.2, z: 176.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4218958397223825818}
+  m_RootOrder: 41
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6664623704528007986
 GameObject:
   m_ObjectHideFlags: 0
@@ -69468,6 +69599,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &8447172097580394853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 475368171657572179}
+  m_Layer: 0
+  m_Name: DroneSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &475368171657572179
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8447172097580394853}
+  m_LocalRotation: {x: -0, y: -0.0056634536, z: -0, w: 0.99998397}
+  m_LocalPosition: {x: 49.41, y: 96.2, z: 177.51}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4218958397223825818}
+  m_RootOrder: 38
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8471781081924579403
 GameObject:
   m_ObjectHideFlags: 0
@@ -81774,6 +81935,36 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &9028920864252258028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4448788191356739231}
+  m_Layer: 0
+  m_Name: DroneSpawner (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4448788191356739231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9028920864252258028}
+  m_LocalRotation: {x: -0, y: -0.0056634536, z: -0, w: 0.99998397}
+  m_LocalPosition: {x: 81.3, y: 118.2, z: 178.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4218958397223825818}
+  m_RootOrder: 42
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9045411622179466563
 GameObject:
   m_ObjectHideFlags: 0

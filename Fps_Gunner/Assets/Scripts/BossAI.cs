@@ -8,26 +8,25 @@ public class BossAI : MonoBehaviour
     private Transform player;
     private float bossSpeed = 25f;
     private Vector3 startPos;
-    private Vector3 endPos, temp;
+    private Vector3 endPos;
     public bool isLeft, isRight;
-
+    private bool isMoveable = true;
     //Health
     public float health = 1000f;
 
     //Particle
+    public Transform firePos;
     public GameObject fireBreath;
-
     //Offset
     public Vector3 offset;
 
 
     private void Start()
     {
-        fireBreath.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player").transform;
         startPos = new Vector3(-130, -45, 200);
         endPos = new Vector3(70, -45, 200);
-       // StartCoroutine(ComeandGo());
+        StartCoroutine(FireShoot());
     }
 
 
@@ -35,44 +34,42 @@ public class BossAI : MonoBehaviour
     private void Update()
     {
         transform.LookAt(player.position + offset);
+        if (isMoveable)
+        {
+            if (gameObject.transform.position.x > endPos.x || isLeft)
+            {
+                gameObject.transform.Translate(Vector3.left * Time.deltaTime * bossSpeed, Space.World);
+                isLeft = true;
+                isRight = false;
+            }
+            if (gameObject.transform.position.x < startPos.x || isRight)
+            {
+                gameObject.transform.Translate(Vector3.right * Time.deltaTime * bossSpeed, Space.World);
+                isLeft = false;
+                isRight = true;
+            }
+        }
 
-        if (gameObject.transform.position.x > endPos.x || isLeft)
-        {
-            gameObject.transform.Translate(Vector3.left * Time.deltaTime * bossSpeed, Space.World);
-            isLeft = true;
-            isRight = false;
-        }
-        if (gameObject.transform.position.x < startPos.x || isRight)
-        {
-            gameObject.transform.Translate(Vector3.right * Time.deltaTime * bossSpeed, Space.World);
-            isLeft = false;
-            isRight = true;
-        }
         BossDeath();
-    }
-
-
-    IEnumerator ComeandGo()
-    {
-        StartCoroutine(FireShoot());
-
-
-
-        // transform.position = Vector3.Lerp(new Vector3(transform.position.x, -45, transform.position.z), new Vector3(transform.position.x, -45, transform.position.z), 5f);
-        // Kullanmaya gerek yok
-        yield return new WaitForSeconds(5f);
-
-        StartCoroutine(ComeandGo());
     }
 
     IEnumerator FireShoot()
     {
-        fireBreath.SetActive(true);
         yield return new WaitForSeconds(10f);
-        fireBreath.SetActive(false);
+        isMoveable = false;
+        GameObject breath = Instantiate(fireBreath, firePos.position, Quaternion.identity);
+        breath.transform.parent = gameObject.transform.GetChild(0);
+        breath.transform.localScale = new Vector3(1, 1, 1);
+        StartCoroutine(MoveableControl());
+        StartCoroutine(FireShoot());
 
     }
 
+    IEnumerator MoveableControl()
+    {
+        yield return new WaitForSeconds(7f);
+        isMoveable = true;
+    }
     private void BossDeath()
     {
         if (health <= 0)
