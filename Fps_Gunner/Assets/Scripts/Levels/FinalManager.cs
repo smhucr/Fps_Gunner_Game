@@ -6,6 +6,7 @@ public class FinalManager : MonoBehaviour
 {
     //Dragon
     public GameObject bossDragon;
+    
     //ControlUnit
     [SerializeField]
     private bool isPlayed = false;
@@ -13,6 +14,7 @@ public class FinalManager : MonoBehaviour
     private bool isStartable = false;
     [SerializeField]
     private bool isCanDo = true;
+    public bool isStopable;
 
     private bool oneDo = true;
     //Player enter exit
@@ -25,30 +27,40 @@ public class FinalManager : MonoBehaviour
     //CloseWall
     public GameObject backWall;
 
+
+
     private void Update()
     {
-        if (player_Enter)
+        if (!isStopable)
         {
-            //LevelDisplay
-            if (oneDo)
+            if (player_Enter)
             {
-                bossDragon.SetActive(true);
-                backWall.SetActive(true);
-                oneDo = false;
+                //LevelDisplay
+                if (oneDo)
+                {
+                    bossDragon.SetActive(true);
+                    backWall.SetActive(true);
+                    oneDo = false;
+                }
+
+                //DoingSpawnEnemy
+                if (isCanDo)
+                {
+                    if (!isPlayed)
+                    {
+                        StartCoroutine(WaitForStarting());
+                    }
+                    if (isStartable)
+                    {
+                        StartCoroutine(DroneSpawn());
+                    }
+                }
             }
-            //DoingSpawnEnemy
-            if (isCanDo)
-            {
-                if (!isPlayed)
-                {
-                    StartCoroutine(WaitForStarting());
-                }
-                if (isStartable)
-                {
-                    StartCoroutine(DroneSpawn());
-                }
-            }   
+
         }
+        
+
+
     }
     IEnumerator WaitForStarting()
     {

@@ -45387,6 +45387,7 @@ MonoBehaviour:
   isPlayed: 0
   isStartable: 0
   isCanDo: 1
+  isStopable: 0
   player_Enter: 0
   drone_Spawners:
   - {fileID: 475368171657572179}
@@ -86569,6 +86570,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8845296753647298228, guid: f52f4fcf3d128f443b5f101257b89198, type: 3}
+      propertyPath: FM
+      value: 
+      objectReference: {fileID: 4495474715298732401}
     - target: {fileID: 8845296753647298228, guid: f52f4fcf3d128f443b5f101257b89198, type: 3}
       propertyPath: isRight
       value: 1

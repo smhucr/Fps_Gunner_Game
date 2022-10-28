@@ -753,6 +753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 50
+  particle: {fileID: 4975935406999010114, guid: 4154555d71b63604fb1172ec4e6202a0, type: 3}
 --- !u!114 &7231844541058847087
 MonoBehaviour:
   m_ObjectHideFlags: 0

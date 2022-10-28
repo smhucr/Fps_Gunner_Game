@@ -6,6 +6,8 @@ public class EnemyHealth : MonoBehaviour
 {
     //Enemies Health
     public float enemyHealth = 50f;
+    //DeathParticle
+    public GameObject particle;
 
     private void Update()
     {
@@ -17,6 +19,9 @@ public class EnemyHealth : MonoBehaviour
         //HealthControl
         if(enemyHealth <= 0)
         {
+            //Spawn Particles
+            Instantiate(particle, gameObject.transform.position,Quaternion.identity);
+
             Destroy(this.gameObject);
         }
     }

@@ -13,6 +13,10 @@ public class BossAI : MonoBehaviour
     private bool isMoveable = true;
     //Health
     public float health = 1000f;
+    public bool isBossAlive;
+    //FinalManagerStopper
+    public FinalManager FM;
+
 
     //Particle
     public Transform firePos;
@@ -23,6 +27,7 @@ public class BossAI : MonoBehaviour
 
     private void Start()
     {
+        isBossAlive = true;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         startPos = new Vector3(-130, -45, 200);
         endPos = new Vector3(70, -45, 200);
@@ -32,27 +37,31 @@ public class BossAI : MonoBehaviour
 
 
     private void Update()
-    {   
-        //Boss Look Player
-        transform.LookAt(player.position + offset);
-        if (isMoveable)
+    {
+        //All script work at boss alive
+        if (isBossAlive)
         {
-            //MovementLeftRight
-            if (gameObject.transform.position.x > endPos.x || isLeft)
+            //Boss Look Player
+            transform.LookAt(player.position + offset);
+            if (isMoveable)
             {
-                gameObject.transform.Translate(Vector3.left * Time.deltaTime * bossSpeed, Space.World);
-                isLeft = true;
-                isRight = false;
+                //MovementLeftRight
+                if (gameObject.transform.position.x > endPos.x || isLeft)
+                {
+                    gameObject.transform.Translate(Vector3.left * Time.deltaTime * bossSpeed, Space.World);
+                    isLeft = true;
+                    isRight = false;
+                }
+                if (gameObject.transform.position.x < startPos.x || isRight)
+                {
+                    gameObject.transform.Translate(Vector3.right * Time.deltaTime * bossSpeed, Space.World);
+                    isLeft = false;
+                    isRight = true;
+                }
             }
-            if (gameObject.transform.position.x < startPos.x || isRight)
-            {
-                gameObject.transform.Translate(Vector3.right * Time.deltaTime * bossSpeed, Space.World);
-                isLeft = false;
-                isRight = true;
-            }
-        }
 
-        BossDeath();
+            BossDeath();
+        }
     }
 
     IEnumerator FireShoot()
@@ -76,7 +85,10 @@ public class BossAI : MonoBehaviour
     {
         if (health <= 0)
         {
+            FM.isStopable = true;
+            GameObject.FindGameObjectWithTag("Text").GetComponent<UITexts>().isGameContinue = false;
             Destroy(this.gameObject);
         }
     }
+
 }
