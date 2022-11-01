@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    private bool isPlayer_alive = true;
+    public bool isPlayer_alive = true;
     public ParticleSystem death_effect;
     //Disable Object
     public GameObject hand;
@@ -21,6 +21,7 @@ public class PlayerManager : MonoBehaviour
         {
             //Set Alive
             isPlayer_alive = false;
+            GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreManage>().playerAlive = false;
             //Particle effect 
             Instantiate(death_effect, transform.position, Quaternion.identity);
             /*

@@ -21,7 +21,7 @@ public class EnemyHealth : MonoBehaviour
         {
             //Spawn Particles
             Instantiate(particle, gameObject.transform.position,Quaternion.identity);
-
+            GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreManage>().score += 15;
             Destroy(this.gameObject);
         }
     }

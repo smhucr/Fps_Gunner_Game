@@ -78,6 +78,7 @@ public class DroneAI : MonoBehaviour
         {
             Instantiate(death_Effect, transform.position, Quaternion.identity);
             GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(drone_Death);
+            GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreManage>().score += 50;
             Destroy(this.gameObject);
         }
     }

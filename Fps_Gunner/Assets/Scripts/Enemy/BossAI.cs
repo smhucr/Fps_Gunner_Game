@@ -87,6 +87,7 @@ public class BossAI : MonoBehaviour
         {
             FM.isStopable = true;
             GameObject.FindGameObjectWithTag("Text").GetComponent<UITexts>().isGameContinue = false;
+            GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreManage>().score += 1000;
             Destroy(this.gameObject);
         }
     }

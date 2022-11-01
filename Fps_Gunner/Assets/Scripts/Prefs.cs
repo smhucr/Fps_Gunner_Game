@@ -5,19 +5,21 @@ using UnityEngine;
 public class Prefs : MonoBehaviour
 {
     public float scoreCalculate;
-    private GameObject dragon;
+    [SerializeField]
+    private bool isDragonAlive = false;
 
 
     private void Start()
     {
-        dragon = GameObject.FindGameObjectWithTag("Dragon");
+        
         scoreCalculate = 0;
     }
 
     private void Update()
     {
-        if (!dragon.GetComponent<BossAI>().isBossAlive)
+        if (GameObject.FindGameObjectWithTag("Dragon").GetComponent<BossAI>().isBossAlive)
         {
+            isDragonAlive = true;
             PlayerPrefs.SetInt("HighScore", (int)scoreCalculate);
         }
     }
