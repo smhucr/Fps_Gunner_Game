@@ -33,6 +33,7 @@ public class WeaponControl : MonoBehaviour
         {
             Instantiate(bullet, transform.position, transform.rotation); // transform.position yerine firepoint.position kullanýp offset ayarlarinda kucuk degisikler yapilabilir
             coolDown = 0.32f;
+            GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreManage>().bulletCount++;
             //Sound
             GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(gunShot);
             //Animation

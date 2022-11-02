@@ -22,6 +22,7 @@ public class PlayerManager : MonoBehaviour
             //Set Alive
             isPlayer_alive = false;
             GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreManage>().playerAlive = false;
+            GameObject.FindGameObjectWithTag("Text").GetComponent<UITexts>().isGameContinue = false;
             //Particle effect 
             Instantiate(death_effect, transform.position, Quaternion.identity);
             /*
