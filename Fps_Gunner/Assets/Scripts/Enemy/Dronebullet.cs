@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Dronebullet : MonoBehaviour
 {
+    //PlayerBossLevel
+    public bool isBossLevel = false;
     //BulletStats
     private float speed = 30f;
     public float lifetime = 5f;
@@ -20,8 +22,14 @@ public class Dronebullet : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if (Physics.CheckSphere(transform.position, radius, player_layer)) {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>().Death();
+        if (Physics.CheckSphere(transform.position, radius, player_layer))
+        {
+            if (!isBossLevel)
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>().Death();
+            else
+            {
+                GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreManage>().score -= 50;
+            }
         }
 
     }

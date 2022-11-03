@@ -27,8 +27,6 @@ public class FinalManager : MonoBehaviour
     //CloseWall
     public GameObject backWall;
 
-
-
     private void Update()
     {
         if (!isStopable)
@@ -58,8 +56,7 @@ public class FinalManager : MonoBehaviour
             }
 
         }
-        
-
+       
 
     }
     IEnumerator WaitForStarting()

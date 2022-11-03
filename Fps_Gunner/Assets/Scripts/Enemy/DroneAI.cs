@@ -78,7 +78,7 @@ public class DroneAI : MonoBehaviour
         {
             Instantiate(death_Effect, transform.position, Quaternion.identity);
             GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(drone_Death);
-            GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreManage>().score += 50;
+            GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreManage>().score += 125;
             Destroy(this.gameObject);
         }
     }
@@ -87,6 +87,9 @@ public class DroneAI : MonoBehaviour
         //IEnumerator de yapmamýn sebebi sarj olup vuruyormus gibi yapmak
         GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(drone_Shoot, 0.4f);
         yield return new WaitForSeconds(0.5f);
-        Instantiate(droneBullet, firePoint.transform.position, transform.rotation * Quaternion.Euler(new Vector3(0, 90, 0))); //firepoint kullanma sebebi drone da obstacle bundan dolayi collision engelliyor
+        GameObject bullet = Instantiate(droneBullet, firePoint.transform.position, transform.rotation * Quaternion.Euler(new Vector3(0, 90, 0)));
+        //firepoint kullanma sebebi drone da obstacle bundan dolayi collision engelliyor
+        bullet.GetComponent<Dronebullet>().isBossLevel = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>().isBossLeveled;
+        bullet.GetComponent<Impact>().isBossLevel = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>().isBossLeveled;
     }
 }

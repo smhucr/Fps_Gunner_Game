@@ -47,11 +47,11 @@ public class ScoreManage : MonoBehaviour
         if (isComplete)
         {
             lastScoreCalculate += Time.deltaTime * 200;//Increase Score slowy
-            lastScoreScreen.text = "Your Score : "  +((int)lastScoreCalculate).ToString();
+            lastScoreScreen.text = "Your Score : " + ((int)lastScoreCalculate).ToString();
             if (lastScoreCalculate > highScore)
             {
                 isComplete = false;
-                lastScoreScreen.text = "Your Score : "+highScore.ToString();
+                lastScoreScreen.text = "Your Score : " + highScore.ToString();
             }
 
         }
@@ -61,7 +61,7 @@ public class ScoreManage : MonoBehaviour
     private int FinalScore()
     {
         int lastScore;
-        lastScore = score*(int)timer/(bulletCount);
+        lastScore = score * (int)timer * 2 / (bulletCount);
 
         return lastScore;
     }

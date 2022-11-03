@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LaserControl : MonoBehaviour
 {
+
     //Layers
     public LayerMask obstacleLayer;
     public LayerMask player_Layer;

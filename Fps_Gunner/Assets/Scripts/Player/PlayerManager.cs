@@ -13,8 +13,13 @@ public class PlayerManager : MonoBehaviour
     public int counter = 0;
     //tempWallDestroy
     public GameObject tempWall;
+    //isBossLevel
+    public bool isBossLeveled;
 
-    
+    private void Start()
+    {
+        isBossLeveled = false;
+    }
     public void Death()
     {
         if (isPlayer_alive)

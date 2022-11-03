@@ -16,8 +16,13 @@ public class FinalEnterLevel : MonoBehaviour
             {
                 //FinalManage
                 if (!FinalMan.player_Enter)
+                {
                     FinalMan.player_Enter = true;
-                
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>().isBossLeveled = true;
+                }
+
+
+
             }
 
         }

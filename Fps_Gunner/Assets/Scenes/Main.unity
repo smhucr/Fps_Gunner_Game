@@ -654,7 +654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  bulletCount: 0
+  bulletCount: 1
   lastScoreScreen: {fileID: 406366541}
   lastScoreCalculate: 0
   scoreTextUI: {fileID: 406366539}
@@ -1260,6 +1260,7 @@ MonoBehaviour:
   crossHair: {fileID: 274903427}
   counter: 0
   tempWall: {fileID: 2329461154734807996}
+  isBossLeveled: 0
 --- !u!54 &2080330611
 Rigidbody:
   m_ObjectHideFlags: 0

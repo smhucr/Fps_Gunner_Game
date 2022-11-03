@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Impact : MonoBehaviour
 {
+    //PlayerBossLevel
+    public bool isBossLevel = false;
     //CheckersStats
     public Transform groundChecker;
     public Transform impactChecker;
@@ -32,8 +34,12 @@ public class Impact : MonoBehaviour
 
             if (afterImpact)
             {
-                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>().Death();
-
+                if (!isBossLevel)
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>().Death();
+                else
+                {
+                    GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreManage>().score -= 50;
+                }
             }
             Destroy(this.gameObject);
             is_Boom = false;
