@@ -21,6 +21,8 @@ public class Impact : MonoBehaviour
     public ParticleSystem impactEffect;
     public LayerMask player_layer;
     public LayerMask obstacleLayer;
+    //Bool 1 Times
+    private bool isOneDo = true;
 
 
     private void Update()
@@ -38,7 +40,11 @@ public class Impact : MonoBehaviour
                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>().Death();
                 else
                 {
-                    GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreManage>().score -= 50;
+                    if (isOneDo)
+                    {
+                        GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreManage>().score -= 50;
+                        isOneDo = false;
+                    }
                 }
             }
             Destroy(this.gameObject);

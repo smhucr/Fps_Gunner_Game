@@ -12,6 +12,8 @@ public class Dronebullet : MonoBehaviour
     public float radius = 0.5f;
     //BulletAim
     public LayerMask player_layer;
+    //Bool 1 time
+    private bool isOneDo = true;
     private void Update()
     {
         transform.Translate(new Vector3(-1, 0, 0) * Time.deltaTime * speed);
@@ -28,7 +30,12 @@ public class Dronebullet : MonoBehaviour
                 GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>().Death();
             else
             {
-                GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreManage>().score -= 50;
+                if (isOneDo)
+                {
+                    GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreManage>().score -= 50;
+                    isOneDo = false;
+                }
+
             }
         }
 

@@ -46,7 +46,7 @@ public class ScoreManage : MonoBehaviour
         }
         if (isComplete)
         {
-            lastScoreCalculate += Time.deltaTime * 200;//Increase Score slowy
+            lastScoreCalculate += Time.deltaTime * 70 * bulletCount;//Increase Score slowy
             lastScoreScreen.text = "Your Score : " + ((int)lastScoreCalculate).ToString();
             if (lastScoreCalculate > highScore)
             {

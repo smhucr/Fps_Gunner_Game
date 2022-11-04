@@ -30,7 +30,7 @@ public class PlayerManager : MonoBehaviour
             GameObject.FindGameObjectWithTag("Text").GetComponent<UITexts>().isGameContinue = false;
             //Particle effect 
             Instantiate(death_effect, transform.position, Quaternion.identity);
-            /*
+            
             //Disable Player
             GetComponent<PlayerMovement>().enabled = false;
             GetComponent<JumpAndGravity>().enabled = false;
@@ -41,8 +41,8 @@ public class PlayerManager : MonoBehaviour
             //Cursor
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-            */
             
+           
         }
     }
     
