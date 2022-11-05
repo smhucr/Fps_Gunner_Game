@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class ScoreManage : MonoBehaviour
 {
     //ScoreCalculate
@@ -61,8 +61,30 @@ public class ScoreManage : MonoBehaviour
     private int FinalScore()
     {
         int lastScore;
-        lastScore = score * (int)timer * 2 / (bulletCount);
+        int timerTemp;
+        if (timer > 30)
+        {
+            timerTemp = (int)timer / 30;
+            lastScore = score * 53 / bulletCount / timerTemp;
+        }
+        else
+        {
+            lastScore = score * 53 / bulletCount / (int)timer;
+        }
+
+
 
         return lastScore;
+    }
+
+    //Button Menus
+    public void RestartButton()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void GoToMainMenuButton()
+    {
+        SceneManager.LoadScene(0);
     }
 }
