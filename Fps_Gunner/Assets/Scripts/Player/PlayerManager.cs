@@ -15,7 +15,8 @@ public class PlayerManager : MonoBehaviour
     public GameObject tempWall;
     //isBossLevel
     public bool isBossLeveled;
-
+    //PauseMenu
+    private GameObject PauseMenu;
     private void Start()
     {
         isBossLeveled = false;
@@ -30,7 +31,8 @@ public class PlayerManager : MonoBehaviour
             GameObject.FindGameObjectWithTag("Text").GetComponent<UITexts>().isGameContinue = false;
             //Particle effect 
             Instantiate(death_effect, transform.position, Quaternion.identity);
-            
+            //Disable Pauseable
+            GameObject.FindGameObjectWithTag("GameManager").GetComponent<PauseMenu>().isGameOver = true;
             //Disable Player
             GetComponent<PlayerMovement>().enabled = false;
             GetComponent<JumpAndGravity>().enabled = false;
@@ -41,9 +43,9 @@ public class PlayerManager : MonoBehaviour
             //Cursor
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-            
-           
+
+
         }
     }
-    
+
 }

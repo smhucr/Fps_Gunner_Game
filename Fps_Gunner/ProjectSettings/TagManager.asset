@@ -9,6 +9,8 @@ TagManager:
   - Dragon
   - Text
   - Score
+  - GameManager
+  - Pistol
   layers:
   - Default
   - TransparentFX

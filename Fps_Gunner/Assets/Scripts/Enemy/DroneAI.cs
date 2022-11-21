@@ -85,7 +85,7 @@ public class DroneAI : MonoBehaviour
     IEnumerator beforeShoot()
     {
         //IEnumerator de yapmamýn sebebi sarj olup vuruyormus gibi yapmak
-        GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(drone_Shoot, 0.4f);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(drone_Shoot, 0.7f);
         yield return new WaitForSeconds(0.5f);
         GameObject bullet = Instantiate(droneBullet, firePoint.transform.position, transform.rotation * Quaternion.Euler(new Vector3(0, 90, 0)));
         //firepoint kullanma sebebi drone da obstacle bundan dolayi collision engelliyor

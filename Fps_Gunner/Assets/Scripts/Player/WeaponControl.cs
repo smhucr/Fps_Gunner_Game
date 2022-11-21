@@ -35,7 +35,7 @@ public class WeaponControl : MonoBehaviour
             coolDown = 0.32f;
             GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreManage>().bulletCount++;
             //Sound
-            GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(gunShot);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(gunShot,0.5f);
             //Animation
             GetComponent<Animator>().SetTrigger("ShotTrigger");
         }

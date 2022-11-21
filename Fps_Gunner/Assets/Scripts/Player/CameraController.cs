@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     //CameraStats
-    public float sensitivity = 100f;
+    public float sensitivity;
     private float xRotation = 0f;
     private void Start()
     {
@@ -15,6 +15,8 @@ public class CameraController : MonoBehaviour
     }
     private void Update()
     {
+        //Sensitivity Changer
+        sensitivity = PlayerPrefs.GetFloat("MouseSensitivity", 200);
         //Camera Look
         transform.Rotate(0, Input.GetAxis("Mouse X") * Time.deltaTime * sensitivity, 0);
         xRotation -= Input.GetAxis("Mouse Y") * Time.deltaTime * sensitivity;
