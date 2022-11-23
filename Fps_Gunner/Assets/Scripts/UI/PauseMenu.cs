@@ -83,6 +83,8 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         //Control Unit
         settingsMenuUI.SetActive(false);
+        hitScore.SetActive(true);
+        timer.SetActive(true);
     }
 
     public void BackToMainMenu()

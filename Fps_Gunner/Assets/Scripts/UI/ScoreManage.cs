@@ -65,11 +65,11 @@ public class ScoreManage : MonoBehaviour
         if (timer > 30)
         {
             timerTemp = (int)timer / 30;
-            lastScore = score * 53 / bulletCount / timerTemp;
+            lastScore = score * 69 / bulletCount / timerTemp;
         }
         else
         {
-            lastScore = score * 53 / bulletCount / (int)timer;
+            lastScore = score * 69 / bulletCount / (int)timer;
         }
 
 
