@@ -11,6 +11,7 @@ public class LaserControl : MonoBehaviour
 
     //RaycastStats
     RaycastHit hit;
+    [SerializeField]
     private float range = 130f;
     private Vector3 far, far1;
     //Mathematics and Physics
@@ -35,7 +36,7 @@ public class LaserControl : MonoBehaviour
 
             if (Physics.Raycast(transform.position, transform.forward, out hit, range, player_Layer) && farCalculator > farCalculator2)
             {
-                
+
                 //Eger lazer cikmiyorsa adam olmez buda kesin lazere olum oluyor
                 hit.transform.gameObject.GetComponent<PlayerManager>().Death();
 

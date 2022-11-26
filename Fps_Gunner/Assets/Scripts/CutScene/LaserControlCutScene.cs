@@ -10,7 +10,7 @@ public class LaserControlCutScene : MonoBehaviour
 
     //RaycastStats
     RaycastHit hit;
-    private float range = 130f;
+    private float range = 300f;
 
     private void Update()
     {

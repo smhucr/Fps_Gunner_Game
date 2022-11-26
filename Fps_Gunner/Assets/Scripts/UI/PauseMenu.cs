@@ -89,6 +89,7 @@ public class PauseMenu : MonoBehaviour
 
     public void BackToMainMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
 
@@ -108,7 +109,7 @@ public class PauseMenu : MonoBehaviour
         hitScore.SetActive(true);
         timer.SetActive(true);
     }
-        
+
     public void RestartGame()
     {
         Time.timeScale = 1;

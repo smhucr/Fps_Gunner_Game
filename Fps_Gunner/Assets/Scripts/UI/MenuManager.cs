@@ -17,8 +17,10 @@ public class MenuManager : MonoBehaviour
     public GameObject MainMenuUI;
     //SettingsMenu
     public GameObject OptionsMenuUI;
+    //AfterPlayResumeButton
+    public GameObject afterPlayResume;
 
-    private void Update()
+    private void Start()
     {
         if (PlayerPrefs.GetInt("isPlayed") == 3)
             resumeButton.SetActive(true);
@@ -58,9 +60,12 @@ public class MenuManager : MonoBehaviour
     {
         playButton.SetActive(false);
         quitButton.SetActive(false);
+        resumeButton.SetActive(false);
         optionsButton.SetActive(false);
         CutSceneCamera.SetActive(true);
         CanvasCamera.SetActive(false);
+        if (PlayerPrefs.GetInt("isPlayed") == 3)
+            afterPlayResume.SetActive(true);
 
         yield return new WaitForSeconds(31f);
         PlayerPrefs.SetInt("isPlayed", 3);
