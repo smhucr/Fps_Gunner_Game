@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     //MainMenu Buttons
+    public GameObject resumeButton;
     public GameObject playButton;
     public GameObject quitButton;
     public GameObject optionsButton;
@@ -16,6 +17,17 @@ public class MenuManager : MonoBehaviour
     public GameObject MainMenuUI;
     //SettingsMenu
     public GameObject OptionsMenuUI;
+
+    private void Update()
+    {
+        if (PlayerPrefs.GetInt("isPlayed") == 3)
+            resumeButton.SetActive(true);
+
+        else
+            resumeButton.SetActive(false);
+    }
+
+
     public void PlayGameButton()
     {
         StartCoroutine(PlayAfterLoadMainGame());
@@ -33,11 +45,15 @@ public class MenuManager : MonoBehaviour
     }
 
     public void BackToMenuButton()
-    {   
+    {
         OptionsMenuUI.SetActive(false);
         MainMenuUI.SetActive(true);
     }
 
+    public void ResumePlayGame()
+    {
+        SceneManager.LoadScene(1);
+    }
     IEnumerator PlayAfterLoadMainGame()
     {
         playButton.SetActive(false);
@@ -47,6 +63,7 @@ public class MenuManager : MonoBehaviour
         CanvasCamera.SetActive(false);
 
         yield return new WaitForSeconds(31f);
+        PlayerPrefs.SetInt("isPlayed", 3);
         SceneManager.LoadScene(1);
     }
 
