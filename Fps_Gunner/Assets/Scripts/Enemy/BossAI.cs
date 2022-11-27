@@ -12,12 +12,12 @@ public class BossAI : MonoBehaviour
     public bool isLeft, isRight;
     private bool isMoveable = true;
     //Health
-    public float health = 1000f;
+    public int health = 1000;
     public bool isBossAlive;
     //FinalManagerStopper
     public FinalManager FM;
-
-
+    //HealthBarScript
+    public HealthBar HB;
     //Particle
     public Transform firePos;
     public GameObject fireBreath;
@@ -31,6 +31,8 @@ public class BossAI : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         startPos = new Vector3(-130, -45, 200);
         endPos = new Vector3(70, -45, 200);
+        HB = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBar>();
+        HB.SetMaxHealth(health);
         StartCoroutine(FireShoot());
     }
 
@@ -38,7 +40,7 @@ public class BossAI : MonoBehaviour
 
     private void Update()
     {
-        //All script work at boss alive
+        //All script work on boss alive
         if (isBossAlive)
         {
             //Boss Look Player
@@ -81,15 +83,18 @@ public class BossAI : MonoBehaviour
         yield return new WaitForSeconds(7f);
         isMoveable = true;
     }
+
     private void BossDeath()
     {
         if (health <= 0)
         {
             FM.isStopable = true;
             GameObject.FindGameObjectWithTag("Text").GetComponent<UITexts>().isGameContinue = false;
-            GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreManage>().score += 1000;
+            GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreManage>().score += 20000;
+            GameObject.FindGameObjectWithTag("HealthBar").SetActive(false);
             Destroy(this.gameObject);
         }
+        HB.SetHealth(health);
     }
 
 }

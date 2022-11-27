@@ -23,7 +23,8 @@ public class PauseMenu : MonoBehaviour
     //Regular UI Objects
     public GameObject hitScore;
     public GameObject timer;
-
+    //BossHealthBar
+    public GameObject bossHealthBar;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");

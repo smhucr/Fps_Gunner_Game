@@ -22,6 +22,9 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
+        
+        // PlayerPrefs.DeleteKey("isPlayed");//Deletes Resume Key
+         
         if (PlayerPrefs.GetInt("isPlayed") == 3)
             resumeButton.SetActive(true);
 
