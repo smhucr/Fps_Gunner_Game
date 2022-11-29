@@ -89,6 +89,8 @@ public class BossAI : MonoBehaviour
 
     private void BossDeath()
     {
+        //Boss Reduce Health
+        HB.SetHealth(health);
         if (health <= 0)
         {
             FM.isStopable = true;
@@ -97,7 +99,7 @@ public class BossAI : MonoBehaviour
             GameObject.FindGameObjectWithTag("HealthBar").SetActive(false);
             Destroy(this.gameObject);
         }
-        HB.SetHealth(health);
+        
     }
 
 }

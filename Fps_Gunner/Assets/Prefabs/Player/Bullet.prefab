@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ebe2b8b84b0ac34c9bfc274422bf7a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 140
+  speed: 150
   lifetime: 2
   metal_hit_effect: {fileID: 6351522024793774337, guid: 98439f9b6771a634d9de51356b75d867, type: 3}
 --- !u!65 &9056099354690553194

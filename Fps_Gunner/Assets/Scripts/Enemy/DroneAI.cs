@@ -19,7 +19,9 @@ public class DroneAI : MonoBehaviour
     public GameObject droneBullet;
     public GameObject firePoint;
     //Drone Health
-    public float health = 75f;
+    public int health = 75;
+    //HealthBarScript
+    public HealthBar HB;
     //Particles
     public ParticleSystem death_Effect;
     //Sounds
@@ -29,6 +31,10 @@ public class DroneAI : MonoBehaviour
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+    private void Start()
+    {
+        HB.SetMaxHealth(health);
     }
     private void Update()
     {
@@ -72,6 +78,8 @@ public class DroneAI : MonoBehaviour
     }
     public void droneDeath()
     {
+        //Drone Reduce Health
+        HB.SetHealth(health);
         //Spawn Particle
         //Destroy Drone
         if (health <= 0)
@@ -81,6 +89,7 @@ public class DroneAI : MonoBehaviour
             GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreManage>().score += 125;
             Destroy(this.gameObject);
         }
+
     }
     IEnumerator beforeShoot()
     {
