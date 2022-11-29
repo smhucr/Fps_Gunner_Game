@@ -23,7 +23,8 @@ public class BossAI : MonoBehaviour
     public GameObject fireBreath;
     //Offset
     public Vector3 offset;
-
+    //Audio
+    public AudioClip attackAuido;
 
     private void Start()
     {
@@ -66,10 +67,12 @@ public class BossAI : MonoBehaviour
         }
     }
 
-    IEnumerator FireShoot()
+    IEnumerator FireShoot() 
     {
+
         yield return new WaitForSeconds(10f);
         isMoveable = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(attackAuido, 0.7f);
         GameObject breath = Instantiate(fireBreath, firePos.position, Quaternion.identity);
         breath.transform.parent = gameObject.transform.GetChild(0);
         breath.transform.localScale = new Vector3(1, 1, 1);

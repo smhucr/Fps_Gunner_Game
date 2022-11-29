@@ -144,6 +144,8 @@ MonoBehaviour:
   health: 1000
   isBossAlive: 0
   FM: {fileID: 0}
+  HB: {fileID: 0}
   firePos: {fileID: 8152790606740911820}
   fireBreath: {fileID: 974788818702611252, guid: de7692c38cdc3a54cbd9e13f4d337e46, type: 3}
   offset: {x: 0, y: 720, z: 0}
+  attackAuido: {fileID: 8300000, guid: 74a0b6536216ab64687e1fc57ee42553, type: 3}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     //BulletStats
-    private float speed = 90f;
+    public float speed = 90f;
     public float lifetime = 5f;
     //Particle
     public ParticleSystem metal_hit_effect;
