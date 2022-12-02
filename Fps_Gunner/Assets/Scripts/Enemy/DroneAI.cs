@@ -62,19 +62,23 @@ public class DroneAI : MonoBehaviour
 
     private void Shoot()
     {
-        if (coolDown > 0)
+        if (player.GetComponent<PlayerManager>().isPlayer_alive)
         {
-            coolDown -= Time.deltaTime;
-        }
-        else
-        {
-            coolDown = 2f;
-            //Shot
-            droneEnemy.GetComponent<Animator>().SetTrigger("Shoot");
+            if (coolDown > 0)
+            {
+                coolDown -= Time.deltaTime;
+            }
+            else
+            {
+                coolDown = 2f;
+                //Shot
+                droneEnemy.GetComponent<Animator>().SetTrigger("Shoot");
 
-            StartCoroutine(beforeShoot());
+                StartCoroutine(beforeShoot());
 
+            }
         }
+
     }
     public void droneDeath()
     {
