@@ -15,8 +15,9 @@ public class ScoreManage : MonoBehaviour
     public Text lastScoreScreen;
     public float lastScoreCalculate;
     public GameObject scoreTextUI;
-    //HitScore
+    //HitScore && HighScore
     public Text txt;
+    public Text highTxt;
     //ControlUnit
     public bool isComplete = false;
     public bool oneDo = false;
@@ -30,7 +31,11 @@ public class ScoreManage : MonoBehaviour
     private void Update()
     {
         if (playerAlive)
+        {
             txt.text = "Hit Score : " + score.ToString();
+            highTxt.text = "High Score : " + PlayerPrefs.GetInt("HighScore", 0);
+        }
+
         else
         {
             if (!oneDo)
@@ -61,19 +66,8 @@ public class ScoreManage : MonoBehaviour
     private int FinalScore()
     {
         int lastScore;
-        int timerTemp;
-        if (timer > 30)
-        {
-            timerTemp = (int)timer / 30;
-            lastScore = score * 69 / bulletCount / timerTemp;
-        }
-        else
-        {
-            lastScore = score * 69 / bulletCount / (int)timer;
-        }
-
-
-
+        lastScore = score;
+        PlayerPrefs.SetInt("HighScore", lastScore);
         return lastScore;
     }
 

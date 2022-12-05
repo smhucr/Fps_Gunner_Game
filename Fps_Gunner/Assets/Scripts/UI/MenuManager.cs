@@ -19,6 +19,8 @@ public class MenuManager : MonoBehaviour
     public GameObject OptionsMenuUI;
     //AfterPlayResumeButton
     public GameObject afterPlayResume;
+    //Story Panel
+    public GameObject storyPanel;
 
     private void Start()
     {
@@ -61,6 +63,7 @@ public class MenuManager : MonoBehaviour
     }
     IEnumerator PlayAfterLoadMainGame()
     {
+        storyPanel.SetActive(true);
         playButton.SetActive(false);
         quitButton.SetActive(false);
         resumeButton.SetActive(false);

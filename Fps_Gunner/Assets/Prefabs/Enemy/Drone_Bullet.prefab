@@ -112,16 +112,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e2d865ef9a234408ebb558503a3a2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBossLevel: 0
+  groundChecker: {fileID: 6968963685971555287}
+  impactChecker: {fileID: 6968963685971555287}
+  impactRadius: 5
   impactEffect: {fileID: 2889713247092644068, guid: c7a358c0f3054ff4fa68efd806f9cbb4, type: 3}
   player_layer:
     serializedVersion: 2
     m_Bits: 128
-  groundChecker: {fileID: 6968963685971555287}
-  impactChecker: {fileID: 6968963685971555287}
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 64
-  impactRadius: 5
 --- !u!114 &6910057224344452101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,7 +135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986d1f987db4c354db361242cd58b9b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 5
+  isBossLevel: 0
+  lifetime: 8
   radius: 0.5
   player_layer:
     serializedVersion: 2
