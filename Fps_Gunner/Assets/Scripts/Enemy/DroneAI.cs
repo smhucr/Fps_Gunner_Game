@@ -27,10 +27,13 @@ public class DroneAI : MonoBehaviour
     //Sounds
     public AudioClip drone_Shoot;
     public AudioClip drone_Death;
+    //GameManager
+    public GameObject gameManager;
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        gameManager = GameObject.FindGameObjectWithTag("GameManager");
     }
     private void Start()
     {
@@ -62,7 +65,7 @@ public class DroneAI : MonoBehaviour
 
     private void Shoot()
     {
-        if (player.GetComponent<PlayerManager>().isPlayer_alive)
+        if (player.GetComponent<PlayerManager>().isPlayer_alive && !gameManager.GetComponent<FinishUI>().isGameFinish)
         {
             if (coolDown > 0)
             {

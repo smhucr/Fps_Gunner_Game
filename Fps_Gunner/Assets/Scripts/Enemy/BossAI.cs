@@ -25,6 +25,9 @@ public class BossAI : MonoBehaviour
     public Vector3 offset;
     //Audio
     public AudioClip attackAuido;
+    //Player && CrossHair
+    public GameObject hand;
+    public GameObject crossHair;
 
     private void Start()
     {
@@ -33,6 +36,8 @@ public class BossAI : MonoBehaviour
         startPos = new Vector3(-130, -45, 200);
         endPos = new Vector3(70, -45, 200);
         HB = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBar>();
+        crossHair = GameObject.FindGameObjectWithTag("CrossHair");
+        hand = GameObject.FindGameObjectWithTag("Hand");
         HB.SetMaxHealth(health);
         StartCoroutine(FireShoot());
     }
@@ -67,7 +72,7 @@ public class BossAI : MonoBehaviour
         }
     }
 
-    IEnumerator FireShoot() 
+    IEnumerator FireShoot()
     {
 
         yield return new WaitForSeconds(10f);
@@ -93,13 +98,26 @@ public class BossAI : MonoBehaviour
         HB.SetHealth(health);
         if (health <= 0)
         {
+            isBossAlive = false;
             FM.isStopable = true;
             GameObject.FindGameObjectWithTag("Text").GetComponent<UITexts>().isGameContinue = false;
             GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreManage>().score += 20000;
             GameObject.FindGameObjectWithTag("HealthBar").SetActive(false);
+            //WinUI
+            GameObject.FindGameObjectWithTag("GameManager").GetComponent<FinishUI>().FinishScreenAprove();
+            //Disable Player
+            player.GetComponent<PlayerMovement>().enabled = false;
+            player.GetComponent<JumpAndGravity>().enabled = false;
+            player.GetComponent<CameraController>().enabled = false;
+            hand.SetActive(false);
+            crossHair.SetActive(false);
+
+            //Cursor
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             Destroy(this.gameObject);
         }
-        
+
     }
 
 }

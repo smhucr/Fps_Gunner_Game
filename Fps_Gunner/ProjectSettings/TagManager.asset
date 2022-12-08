@@ -12,6 +12,9 @@ TagManager:
   - GameManager
   - Pistol
   - HealthBar
+  - Hand
+  - WinUI
+  - CrossHair
   layers:
   - Default
   - TransparentFX

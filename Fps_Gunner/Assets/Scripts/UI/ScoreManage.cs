@@ -67,7 +67,10 @@ public class ScoreManage : MonoBehaviour
     {
         int lastScore;
         lastScore = score;
-        PlayerPrefs.SetInt("HighScore", lastScore);
+        if (score > PlayerPrefs.GetInt("HighScore", 0))
+        {
+            PlayerPrefs.SetInt("HighScore", lastScore);
+        }
         return lastScore;
     }
 
