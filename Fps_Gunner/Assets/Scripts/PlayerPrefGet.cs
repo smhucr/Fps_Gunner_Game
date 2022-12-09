@@ -15,6 +15,7 @@ public class PlayerPrefGet : MonoBehaviour
         PlayerPrefs.SetFloat("MasterVolume", 0);
         PlayerPrefs.SetFloat("MusicVolume", 0);
         PlayerPrefs.SetInt("HighScore", 0);
+        PlayerPrefs.DeleteKey("isPlayed");
     }
 
 

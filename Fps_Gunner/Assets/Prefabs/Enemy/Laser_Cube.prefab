@@ -115,6 +115,7 @@ MonoBehaviour:
   player_Layer:
     serializedVersion: 2
     m_Bits: 128
+  range: 130
 --- !u!120 &1666242894028530307
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -328,6 +329,7 @@ MonoBehaviour:
   player_Layer:
     serializedVersion: 2
     m_Bits: 128
+  range: 130
 --- !u!120 &1666242894422549215
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -541,6 +543,7 @@ MonoBehaviour:
   player_Layer:
     serializedVersion: 2
     m_Bits: 128
+  range: 130
 --- !u!120 &1666242895723717639
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -738,7 +741,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.25, y: 1.25, z: 1.25}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6865294170694929109
 MonoBehaviour:
@@ -883,6 +886,7 @@ MonoBehaviour:
   player_Layer:
     serializedVersion: 2
     m_Bits: 128
+  range: 130
 --- !u!120 &1666242896138342115
 LineRenderer:
   m_ObjectHideFlags: 0
