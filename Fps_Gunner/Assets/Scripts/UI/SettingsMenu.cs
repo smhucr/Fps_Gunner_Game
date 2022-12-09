@@ -16,31 +16,37 @@ public class SettingsMenu : MonoBehaviour
         {
             PlayerPrefs.SetInt("Resoulation", 0);
             Screen.SetResolution(1920, 1080, isFullScreenMode);
+            Screen.fullScreen = isFullScreenMode;
         }
         else if (index == 1)
         {
             PlayerPrefs.SetInt("Resoulation", 1);
             Screen.SetResolution(1440, 900, isFullScreenMode);
+            Screen.fullScreen = isFullScreenMode;
         }
         else if (index == 2)
         {
             PlayerPrefs.SetInt("Resoulation", 2);
             Screen.SetResolution(1280, 1024, isFullScreenMode);
+            Screen.fullScreen = isFullScreenMode;
         }
         else if (index == 3)
         {
             PlayerPrefs.SetInt("Resoulation", 3);
             Screen.SetResolution(1280, 800, isFullScreenMode);
+            Screen.fullScreen = isFullScreenMode;
         }
         else if (index == 4)
         {
             PlayerPrefs.SetInt("Resoulation", 4);
             Screen.SetResolution(1024, 768, isFullScreenMode);
+            Screen.fullScreen = isFullScreenMode;
         }
         else if (index == 5)
         {
             PlayerPrefs.SetInt("Resoulation", 5);
             Screen.SetResolution(800, 600, isFullScreenMode);
+            Screen.fullScreen = isFullScreenMode;
         }
     }
     public void SetQuality(int qualityIndex)

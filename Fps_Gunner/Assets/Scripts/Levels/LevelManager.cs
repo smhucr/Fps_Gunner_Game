@@ -88,7 +88,8 @@ public class LevelManager : MonoBehaviour
     }
     private void SpawnFinalLevel()
     {
-        Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z + 528);
+
+        Vector3 pos = new Vector3(transform.position.x, transform.position.y + 14.8f, transform.position.z + 541.15f);
         GameObject new_Level = Instantiate(finalLevel, pos, Quaternion.identity);
     }
 
