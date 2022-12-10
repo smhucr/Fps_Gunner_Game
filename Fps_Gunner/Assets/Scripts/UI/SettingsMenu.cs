@@ -94,4 +94,8 @@ public class SettingsMenu : MonoBehaviour
         PlayerPrefs.SetFloat("MusicVolume", masterValue);
         audioMix.SetFloat("MusicVolume", masterValue);
     }
+    public void SetGravityVolume(float gravityValue)
+    {
+        PlayerPrefs.SetFloat("Gravity", gravityValue);
+    }
 }

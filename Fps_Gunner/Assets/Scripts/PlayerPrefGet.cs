@@ -6,6 +6,7 @@ public class PlayerPrefGet : MonoBehaviour
 {
     private void Start()
     {
+        //PlayerPrefs.DeleteAll();
         PlayerPrefs.SetInt("Resoulation", 0);
         Screen.SetResolution(1920, 1080, true);
         PlayerPrefs.SetInt("Quality", 0);
@@ -14,6 +15,7 @@ public class PlayerPrefGet : MonoBehaviour
         PlayerPrefs.SetFloat("MouseSensitivity", 300);
         PlayerPrefs.SetFloat("MasterVolume", 0);
         PlayerPrefs.SetFloat("MusicVolume", 0);
+        PlayerPrefs.SetFloat("Gravity", 80);
         PlayerPrefs.SetInt("HighScore", 0);
         PlayerPrefs.DeleteKey("isPlayed");
     }

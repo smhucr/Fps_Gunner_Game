@@ -14,6 +14,7 @@ public class Prefs : MonoBehaviour
     public Slider musicVolume;
     public Slider masterVolume;
     public Slider sensitivity;
+    public Slider gravity;
     //DropDowns
     // public GameObject screenDropDown1;
     // public GameObject qualityDropDown1;
@@ -27,6 +28,7 @@ public class Prefs : MonoBehaviour
         musicVolume.value = PlayerPrefs.GetFloat("MusicVolume", 0);
         masterVolume.value = PlayerPrefs.GetFloat("MasterVolume", 0);
         sensitivity.value = PlayerPrefs.GetFloat("MouseSensitivity", 300);
+        gravity.value = PlayerPrefs.GetFloat("Gravity", 80);
         if (PlayerPrefs.GetInt("isFullScreen", 1) == 1)
             isFullScreen.isOn = true;
         else
