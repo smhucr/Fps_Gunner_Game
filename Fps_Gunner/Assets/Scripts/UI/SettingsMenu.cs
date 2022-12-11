@@ -72,7 +72,7 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetFullScreen(bool isFullScreen)
     {
-        if(isFullScreen)
+        if (isFullScreen)
             PlayerPrefs.SetInt("isFullScreen", 1);
         else
             PlayerPrefs.SetInt("isFullScreen", 0);
@@ -96,6 +96,7 @@ public class SettingsMenu : MonoBehaviour
     }
     public void SetGravityVolume(float gravityValue)
     {
-        PlayerPrefs.SetFloat("Gravity", gravityValue);
+        float gravityRegulator = 150 - gravityValue;
+        PlayerPrefs.SetFloat("Gravity", gravityRegulator);
     }
 }

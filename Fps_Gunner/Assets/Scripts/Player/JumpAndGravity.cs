@@ -6,6 +6,7 @@ public class JumpAndGravity : MonoBehaviour
 {
     //JumpandGravity Stats
     private float gravity = -9.807f;
+    [SerializeField]
     private float gravityDivide = 80f; //Artarsa Daha gec yere duser
     private float jumpHeight = 17f;
     public float jumpSpeed = 30f;
@@ -24,6 +25,7 @@ public class JumpAndGravity : MonoBehaviour
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
+        gravityDivide = PlayerPrefs.GetFloat("Gravity", 80);
 
     }
     private void Update()
