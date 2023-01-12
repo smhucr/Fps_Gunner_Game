@@ -913,7 +913,7 @@ ScriptsOnlyBuild:
     className: Colummn_Jump
   - hash:
       serializedVersion: 2
-      Hash: 4373b4f30afab26fb37f15100522140f
+      Hash: 818f4aab1d4d4068d2085312b4c0d9f8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: JumpAndGravity
@@ -1605,4 +1605,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/smhuc/Desktop/UnderWorldFoes/UnderWorld_Foes.exe
+  playerPath: C:/Users/smhuc/Desktop/UnderWorldFoesa/UnderWorld_Foes.exe
